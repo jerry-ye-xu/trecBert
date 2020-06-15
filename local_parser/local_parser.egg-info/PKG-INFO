@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: local-parser
+Version: 0.0.1
+Summary: Parsing Module for TREC Precision Medicine Track, used to build labelled datasets for BERT and retrieve 
+Home-page: https://bitbucket.csiro.au/users/xu081/repos/nlp_in_ir/browse
+Author: Jerry Xu
+Author-email: jerry.xu@csiro.au
+License: UNKNOWN
+Description: ## Introduction
+        
+        This module contains code that is used to populate the `trial_topics_combined_*.pickle` files and `trials_pickle_<year>` directories.
+        
+        We require this to build a labelled dataset for the TREC Precision Medicine Track, Clinical Trials task.
+        
+        This is dependent on the existence of a Whoosh storage (ask Maciek) with the appropriate index.
+        
+        ## Usage
+        
+        1. To build all the files needed for BERT Model
+        
+        From the root directory of the repo run
+        ```{bash}
+        python3 parser/main.py
+        ```
+        
+        2. To import the module into a file/notebook
+        
+        First, add the path of the module to the `PATH` environment variable.
+        
+        ```{bash}
+        export PATH=$PATH:/Users/xu081/Documents/trec_t2/local_parser
+        ```
+        
+        ## Installing the Package
+        
+        Install the package with no changes
+        ```{bash}
+        python3 -m pip install ./local_parser
+        ```
+        
+        Install package in develop mode
+        ```{bash}
+        pip install -e ./
+        ```
+        
+        ## Using the package inside Jupyter Notebook
+        
+        As a quick hack, you can as it to your path inside the notebook and then import it.
+        
+        To check the path, run `python3 -i` and then
+        
+        ```{python}
+        import os
+        import sys
+        
+        import local_parser
+        
+        path = os.path.dirname(local_parser.__file__)
+        
+        sys.path.append(path)
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

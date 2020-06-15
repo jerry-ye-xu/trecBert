@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bert-seq-model
+Version: 0.0.1
+Summary: BERT model for sequence classification implemented using HuggingFace and Pytorch
+Home-page: https://bitbucket.csiro.au/users/xu081/repos/nlp_in_ir/browse
+Author: Jerry Xu
+Author-email: jerry.xu@csiro.au
+License: UNKNOWN
+Description: ## BERT Model
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
