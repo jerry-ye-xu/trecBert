@@ -1,0 +1,5 @@
+{"out_dir":"/../results/", "solr_addr":"http://130.155.204.198:8983/solr/trec-cds-2016",
+"modules":"modules/", "ranking_modules":"modules/ranking/",
+"index_fields":["text"],
+"field_boosts":[1],
+"qrels_folder":"/../data/qrels/", "topic_folder":"/../data/topics/"}

@@ -1,0 +1,4 @@
+{
+    "trec_eval_script": "./A2A4UMA/utils/eval/trec_eval/trec_eval",
+    "sample_eval_script": "./A2A4UMA/utils/eval/sample_eval.pl"
+}

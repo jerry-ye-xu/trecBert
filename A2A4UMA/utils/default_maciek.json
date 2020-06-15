@@ -1,0 +1,4 @@
+{
+    "trec_eval_script": "/home/ryb003/Desktop/TREC workspace/TRECEvalP36/utils/eval/trec_eval.9.0/trec_eval",
+    "sample_eval_script": "/home/ryb003/Desktop/TREC workspace/TRECEvalP36/utils/eval/sample_eval.pl"
+}

@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: query-expansion
+Version: 0.0.1
+Summary: Parsing Module for TREC Precision Medicine Track, used to build labelled datasets for BERT and retrieve 
+Home-page: https://bitbucket.csiro.au/users/xu081/repos/nlp_in_ir/browse
+Author: Jerry Xu
+Author-email: jerry.xu@csiro.au
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
