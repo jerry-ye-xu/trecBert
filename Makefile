@@ -101,7 +101,7 @@ update_req: requirements.txt
 
 continue_pretrain: $(PRETRAINED_MODELS)/BLUE_BERT $(LM)
 	python3 $(LM)/BertFinetuneLm.py \
-		--model_name_or_path $(PRETRAINED_MODELS)/BLUE_BERT \
+		--model_name_or_path $(PRETRAINED_MODELS)/BLUE_BERT_HF \
 		--model_type "BERT" \
 		--train_data_file $(DATA)/trials_raw_sample.txt \
 		--line_by_line \

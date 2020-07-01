@@ -5,26 +5,26 @@ from transformers.tokenization_bert import BertTokenizer
 
 def save_model_in_pt_format(INPUT_PATH, OUTPUT_PATH):
     CONFIG = BertConfig(
-        f"{INPUT_PATH}/config.json"
-        , num_labels=2
+        f"{INPUT_PATH}"
     )
 
-    model = BertForSequenceClassification.from_pretrained(
-        f"{INPUT_PATH}/pytorch_model.bin",
-        config=CONFIG
+    print(CONFIG)
+
+    model, loading_info = BertForPreTraining.from_pretrained(
+        f"{INPUT_PATH}",
+        output_loading_info=True
     )
-    model.save_pretrained(CONFIG)
+    model.save_pretrained(OUTPUT_PATH)
 
     # Slightly different for tokenizer.
     tokenizer = BertTokenizer.from_pretrained(
-        f"{INPUT_PATH}/vocab.txt",
+        f"{INPUT_PATH}",
         do_lower_case=True
     )
-    tokenizer.save_pretrained()
+    tokenizer.save_pretrained(OUTPUT_PATH)
 
 if __name__ == "__main__":
     MODEL_PATH = "./data/pretrained_models"
     INPUT_PATH = f"{MODEL_PATH}/BLUE_BERT"
-    INPUT_PATH = f"{MODEL_PATH}/biobert_pubmed"
     OUTPUT_PATH = f"{MODEL_PATH}/BLUE_BERT_HF"
     save_model_in_pt_format(INPUT_PATH, OUTPUT_PATH)
