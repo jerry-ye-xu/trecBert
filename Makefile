@@ -114,6 +114,7 @@ continue_pretrain: $(PRETRAINED_MODELS)/BLUE_BERT $(LM)
 		--num_train_epochs 3 \
 		--logging_steps 50 \
 		--save_steps 20 \
+		--n_gpu 1
 # 		--config_name $(PRETRAINED_MODELS)/BLUE_BERT/config.json \
 # 		--tokenizer_name $(PRETRAINED_MODELS)/BLUE_BERT/vocab.txt \
 # 		-- eval_data_file \
