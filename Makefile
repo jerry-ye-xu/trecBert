@@ -108,7 +108,7 @@ continue_pretrain: $(PRETRAINED_MODELS)/BLUE_BERT $(LM)
 		--mlm \
 		--mlm_probability "0.15" \
 		--block_size 256 \
-		--output_dir $(FINETUNED_MODELS) \
+		--output_dir $(FINETUNED_MODELS)/blue_bert_pretrain_continued \
 		--do_train \
 		--per_device_train_batch_size 8 \
 		--num_train_epochs 3 \
