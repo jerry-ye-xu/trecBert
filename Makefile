@@ -8,6 +8,8 @@ BERT   := ./bert_seq_class
 LTR    := ./ltr_models
 A2A    := ./A2A4UMA
 
+LM     := ./bert_finetune_lm
+
 DATA          := ./data
 INDEX         := ./A2A4UMA/indices
 LABELLED_DATA := $(DATA)/pm_labels_2017 $(DATA)/pm_labels_2018 $(DATA)/pm_labels_2019
@@ -87,12 +89,36 @@ update_venv: requirements.txt
 	pip3 freeze > requirements.txt
 	touch venv/bin/activate
 
+update_req: requirements.txt
+	pip3 freeze > requirements.txt
+
 # Incorrect.
 # local_module: $(BERT) $(QE) $(PARSER)
 # 	. venv/bin/activate; \
 # 	pip3 install -e $(BERT) && \
 # 	pip3 install -e $(QE) && \
 # 	pip3 install -e $(PARSER)
+
+continue_pretrain: $(PRETRAINED_MODELS)/BLUE_BERT $(LM)
+	python3 $(LM)/BertFinetuneLm.py \
+		--model_name_or_path $(PRETRAINED_MODELS)/BLUE_BERT \
+		--model_type "BERT" \
+		--train_data_file $(DATA)/trials_raw_sample.txt \
+		--line_by_line \
+		--mlm \
+		--mlm_probability "0.15" \
+		--block_size 256 \
+		--output_dir $(FINETUNED_MODELS) \
+		--do_train \
+		--per_device_train_batch_size 8 \
+		--num_train_epochs 3 \
+		--logging_steps 50 \
+		--save_steps 20 \
+# 		--config_name $(PRETRAINED_MODELS)/BLUE_BERT/config.json \
+# 		--tokenizer_name $(PRETRAINED_MODELS)/BLUE_BERT/vocab.txt \
+# 		-- eval_data_file \
+#		--overwrite_cache
+
 
 build_training: $(PARSER) $(LABELLED_DATA) $(INDEX)
 	python3 $(PARSER)/initial_build.py
