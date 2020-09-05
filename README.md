@@ -24,7 +24,7 @@ This repository contains Jerry's code for building, training and evaluating vari
 
 This project is part of the Language and Social Computing Team of Data61, and runs over summer of 2019-20.
 
-The published paper, Clinical trial search: Using biomedical language understanding models for re-ranking, can be found [here](https://www.sciencedirect.com/science/article/abs/pii/S1532046420301581)
+The results were published in the Journal of Biomedical Informatics, titled __**Clinical trial search: Using biomedical language understanding models for re-ranking**__. The paper can be found [here](https://www.sciencedirect.com/science/article/abs/pii/S1532046420301581).
 
 ---
 <br>
