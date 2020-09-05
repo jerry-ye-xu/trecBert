@@ -24,6 +24,8 @@ This repository contains Jerry's code for building, training and evaluating vari
 
 This project is part of the Language and Social Computing Team of Data61, and runs over summer of 2019-20.
 
+The published paper, Clinical trial search: Using biomedical language understanding models for re-ranking, can be found [here](https://www.sciencedirect.com/science/article/abs/pii/S1532046420301581)
+
 ---
 <br>
 
@@ -184,6 +186,7 @@ make build_training
 which creates `trials_topics_combined_all_years.pickle` files.
 
 Note: We can build 2 years worth of data at a time before we run out of memory on my personal computer, so the code is altered slightly to reflect that.
+<br>
 Note2: This takes a few hours to run, so feel free to get a cup of coffee
 
 __Query Expansion__
