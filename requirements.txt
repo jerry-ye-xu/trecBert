@@ -36,7 +36,7 @@ pyparsing==2.4.6
 pysolr==3.8.1
 python-dateutil==2.8.1
 pytz==2019.3
-PyYAML==5.2
+PyYAML==5.4
 -e git+ssh://git@bitbucket.csiro.au:7999/~xu081/trec_t2.git@54b276901cfff17f751c3873cbf96e6437effc5f#egg=query_expansion&subdirectory=query_expansion
 rdflib==4.2.2
 regex==2019.12.20
